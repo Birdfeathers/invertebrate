@@ -7,11 +7,13 @@ public class DragBehavior : MonoBehaviour
     private bool isDragging;
     public bool invert;
     public string species;
-    private int state; 
+    public bool iscorrect;
+    public bool staycorrect;
     // Start is called before the first frame update
     void Start()
     {
-
+        iscorrect = false;
+        staycorrect = false;
     }
 
     // Update is called once per frame
@@ -31,6 +33,8 @@ public class DragBehavior : MonoBehaviour
     public void OnMouseUp()
     {
         isDragging = false;
+        if(iscorrect) staycorrect = true;
+        else staycorrect = false;
     }
 
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VBehavior : MonoBehaviour
+public class IBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     //public DragBehavior[] DragBehaviorList;
@@ -20,7 +20,7 @@ public class VBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DragBehavior drag = other.gameObject.GetComponent<DragBehavior>();
-        if(!drag.invert)
+        if(drag.invert)
         {
             drag.iscorrect = true;
         }
@@ -29,7 +29,7 @@ public class VBehavior : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         DragBehavior drag = other.gameObject.GetComponent<DragBehavior>();
-        if(!drag.invert)
+        if(drag.invert)
         {
             drag.iscorrect = false;
         }
