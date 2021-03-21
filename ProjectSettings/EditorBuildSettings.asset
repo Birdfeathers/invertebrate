@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Resources.unity
     guid: 567945b97e5d2bf4194b71572cf05e30
+  - enabled: 1
+    path: Assets/Scenes/Meta.unity
+    guid: 353a0a62d2febbf49a3d4f588a33e5aa
+  - enabled: 1
+    path: Assets/Scenes/Role.unity
+    guid: bfadac716025cbc429a701549748a607
+  - enabled: 1
+    path: Assets/Scenes/Type.unity
+    guid: 908f388e578719549ae0074aae736dbf
   m_configObjects: {}

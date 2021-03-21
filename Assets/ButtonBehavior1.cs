@@ -26,4 +26,24 @@ public class ButtonBehavior1 : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void Loadm()
+    {
+        SceneManager.LoadScene("Meta");
+    }
+
+    public void Loadre()
+    {
+        SceneManager.LoadScene("Resources");
+    }
+
+    public void Loadro()
+    {
+        SceneManager.LoadScene("Role");
+    }
+
+    public void Loadt()
+    {
+        SceneManager.LoadScene("Type");
+    }
 }
