@@ -15,7 +15,12 @@
 <<<<<<< HEAD
 /[Uu]ser[Ss]ettings/
 
-log.txt
+Invertebrate.exe
+UnityCrashHandler64.exe
+UnityPlayer.dll
+/MonoBleedingEdge/
+/Invertebrate_Data/
+.vsconfig
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -88,3 +93,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 =======
 >>>>>>> origin/main
+
