@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimalBehavior : MonoBehaviour
 {
-    public List<DragBehavior> DragBehaviorList;
+    public List<DragBehavior> dragBehaviorList;
     private bool finished;
     public GameObject endscreen;
     public GameObject animalPrefab;
@@ -12,13 +12,17 @@ public class AnimalBehavior : MonoBehaviour
     public Animalinfo animalinfo;
     // Start is called before the first frame update
     int rand;
-    int AnimalNum = 12;
+    int AnimalNum;
 
     void Start()
     {
+            AnimalNum = 12;
             animalinfo = new Animalinfo();
             finished = false;
-            //rand = Random.Range(0, 12);
+            for(int i = 0; i < AnimalNum; i++)
+            {
+                CreateAnimal(Animalinfo.locList[i], animalinfo.animalList[i]);
+            }
     }
 
     // Update is called once per frame
@@ -27,10 +31,10 @@ public class AnimalBehavior : MonoBehaviour
         bool correct = true;
         if(!finished)
         {
-            if(DragBehaviorList.Count == 0) correct = false;
-            for(int i = 0; i < DragBehaviorList.Count; i++)
+            if(dragBehaviorList.Count == 0) correct = false;
+            for(int i = 0; i < dragBehaviorList.Count; i++)
             {
-                if(!DragBehaviorList[i].staycorrect) correct = false;
+                if(!dragBehaviorList[i].staycorrect) correct = false;
             }
             if(correct)
             {
@@ -44,6 +48,7 @@ public class AnimalBehavior : MonoBehaviour
     public void ResetAnimals()
     {
         DeleteAnimals();
+        Shuffle();
         AddAnimals();
         endscreen.SetActive(false);
         finished = false;
@@ -52,17 +57,16 @@ public class AnimalBehavior : MonoBehaviour
 
     void DeleteAnimals()
     {
-        for(int i = 0; i < DragBehaviorList.Count; i++)
+        for(int i = 0; i < dragBehaviorList.Count; i++)
         {
-            Destroy(DragBehaviorList[i].gameObject);
+            Destroy(dragBehaviorList[i].gameObject);
         }
-        DragBehaviorList.Clear();
+        dragBehaviorList.Clear();
 
     }
 
     void AddAnimals()
     {
-        Shuffle();
         for(int i = 0; i < AnimalNum; i++)
         {
             CreateAnimal(Animalinfo.locList[i], animalinfo.animalList[i]);
@@ -76,13 +80,14 @@ public class AnimalBehavior : MonoBehaviour
         NewAnimal.GetComponent<SpriteRenderer>().sprite = animal.Pic;
         dragBehavior.species = animal.Species;
         dragBehavior.invert = animal.Invert;
-        DragBehaviorList.Add(dragBehavior);
+        dragBehaviorList.Add(dragBehavior);
 
     }
 
     void Shuffle()
     {
         List<Animals> animalList = animalinfo.animalList;
+        print(animalList.Count);
         for(int i = animalList.Count; i > 1; i--)
         {
             rand = Random.Range(0, i);

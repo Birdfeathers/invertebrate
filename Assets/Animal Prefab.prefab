@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7106100261503762486}
   - component: {fileID: 3926674579839737706}
   - component: {fileID: 6425153433914815002}
-  - component: {fileID: 2889357056789043870}
+  - component: {fileID: -399496463547660893}
   m_Layer: 0
   m_Name: Animal Prefab
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8437004314286144443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f59ac967a497d44449df76aa686697b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d38ec9f7a70b754e84023129117009e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2889357056789043870
+--- !u!61 &-399496463547660893
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,12 +139,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.98, y: 7.84}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 7.98, y: 7.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.98, y: 7.84}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
