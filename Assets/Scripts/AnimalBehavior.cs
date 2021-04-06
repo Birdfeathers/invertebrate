@@ -87,7 +87,6 @@ public class AnimalBehavior : MonoBehaviour
     void Shuffle()
     {
         List<Animals> animalList = animalinfo.animalList;
-        print(animalList.Count);
         for(int i = animalList.Count; i > 1; i--)
         {
             rand = Random.Range(0, i);

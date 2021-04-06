@@ -60,7 +60,9 @@ public class Animalinfo
         new Animals(32, "Squid",true, Resources.Load<Sprite>("Squid")),
         new Animals(33, "Starfish",true, Resources.Load<Sprite>("Starfish")),
         new Animals(34, "Stingray",false, Resources.Load<Sprite>("Stingray")),
-        new Animals(35, "Turtle",false, Resources.Load<Sprite>("Turtle"))
+        new Animals(35, "Turtle",false, Resources.Load<Sprite>("Turtle")),
+        new Animals(36, "Seaurchin",true, Resources.Load<Sprite>("Seaurchin")),
+        new Animals(37, "Spider",true, Resources.Load<Sprite>("Spider2")),
     };
 
     public static List<Vector2> locList = new List<Vector2>{
