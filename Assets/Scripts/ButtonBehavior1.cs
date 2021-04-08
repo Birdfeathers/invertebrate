@@ -57,4 +57,23 @@ public class ButtonBehavior1 : MonoBehaviour
         SceneManager.LoadScene("PictureCredits");
     }
 
+    public void Loadii()
+    {
+        SceneManager.LoadScene("Invertebrate");
+    }
+
+    public void Loadv()
+    {
+        SceneManager.LoadScene("Vertebrates");
+    }
+
+    public void Loadlv()
+    {
+        SceneManager.LoadScene("Land Vertebrates");
+    }
+
+    public void Loada()
+    {
+        SceneManager.LoadScene("Arthropods");
+    }
 }
