@@ -28,7 +28,7 @@ public class Relationships : MonoBehaviour
         line.AddComponent<LineRenderer>();
         LineRenderer lr = line.GetComponent<LineRenderer>();
         lr.material = new Material(Shader.Find("Sprites/Default"));
-        lr.material.color = Color.red;
+        lr.material.color = Color.green;
         lr.SetWidth(.1f, .1f);
         lr.SetPosition(0, pos1);
         lr.SetPosition(1, pos2);
@@ -41,8 +41,9 @@ public class Relationships : MonoBehaviour
         RectTransform rectTransform1 = child1.GetComponent<RectTransform>();
         RectTransform rectTransform2 = child2.GetComponent<RectTransform>();
 
-        float x1 = rectTransform1.rect.width;
-        float x2 = rectTransform2.rect.width;
+        float x1 = rectTransform1.rect.width /75;
+        float x2 = rectTransform2.rect.width/75;
+        print(x1);
 
         // define all x and y coordinates used to make new points
         float midx = (parent.x + ch1.x -1)/2;
@@ -56,8 +57,8 @@ public class Relationships : MonoBehaviour
         Vector3 upper  = new Vector3(midx, ch1y, 0f);
         Vector3 mid = new Vector3(midx, py, 0f);
         Vector3 lower = new Vector3(midx, ch2y, 0f);
-        Vector3 newchild1 = new Vector3(ch1x, ch1y, 0f);
-        Vector3 newchild2 = new Vector3(ch2x, ch2y, 0f);
+        Vector3 newchild1 = new Vector3(ch1x - x1, ch1y, 0f);
+        Vector3 newchild2 = new Vector3(ch2x - x2, ch2y, 0f);
 
         // Draw lines for tree
         DrawLine(parent, mid);
