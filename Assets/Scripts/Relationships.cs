@@ -41,8 +41,8 @@ public class Relationships : MonoBehaviour
         RectTransform rectTransform1 = child1.GetComponent<RectTransform>();
         RectTransform rectTransform2 = child2.GetComponent<RectTransform>();
 
-        float x1 = rectTransform1.rect.width /75;
-        float x2 = rectTransform2.rect.width/75;
+        float x1 = rectTransform1.rect.width /90;
+        float x2 = rectTransform2.rect.width/90;
         print(x1);
 
         // define all x and y coordinates used to make new points

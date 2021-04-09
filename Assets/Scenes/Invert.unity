@@ -152,19 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47d33dd9aa172841adae45d7131d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DragBehaviorList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  dragBehaviorList: []
   endscreen: {fileID: 285913073}
   animalPrefab: {fileID: 8437004314286144443, guid: 493a1c227942177459270870e5c5d692, type: 3}
 --- !u!4 &71310469
@@ -1699,7 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
