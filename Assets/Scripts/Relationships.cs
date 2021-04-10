@@ -6,9 +6,11 @@ public class Relationships : MonoBehaviour
 {
     public GameObject child1;
     public GameObject child2;
+    public List<GameObject> lines;
     // Start is called before the first frame update
     void Start()
     {
+        lines = new List<GameObject>();
         if(child1 != null)
         {
             Draw(transform.position, child1.transform.position, child2.transform.position);
@@ -32,6 +34,7 @@ public class Relationships : MonoBehaviour
         lr.SetWidth(.1f, .1f);
         lr.SetPosition(0, pos1);
         lr.SetPosition(1, pos2);
+        lines.Add(line);
 
 
     }
@@ -43,7 +46,6 @@ public class Relationships : MonoBehaviour
 
         float x1 = rectTransform1.rect.width /90;
         float x2 = rectTransform2.rect.width/90;
-        print(x1);
 
         // define all x and y coordinates used to make new points
         float midx = (parent.x + ch1.x -1)/2;
@@ -65,5 +67,21 @@ public class Relationships : MonoBehaviour
         DrawLine(upper, lower);
         DrawLine(upper, newchild1);
         DrawLine(lower, newchild2);
+    }
+
+    public void Hide()
+    {
+        for(int i = 0; i < lines.Count; i++)
+        {
+            lines[i].SetActive(false);
+        }
+    }
+
+    public void Reveal()
+    {
+        for(int i = 0; i < lines.Count; i++)
+        {
+            lines[i].SetActive(true);
+        }
     }
 }
