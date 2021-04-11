@@ -64,20 +64,22 @@ public class Animalinfo
         new Animals(36, "Seaurchin",true, Resources.Load<Sprite>("Seaurchin")),
         new Animals(37, "Spider",true, Resources.Load<Sprite>("Spider2")),
     };
+    static float x = 55;
+    static float y = -40;
 
     public static List<Vector2> locList = new List<Vector2>{
-        new Vector2(-30, -110),
-        new Vector2(10, -110),
-        new Vector2(-10, -70),
-        new Vector2(-180, -20),
-        new Vector2(-140, -20),
-        new Vector2(-100, -20),
-        new Vector2(-60, -20),
-        new Vector2(-20, -20),
-        new Vector2(20, -20),
-        new Vector2(60, -20),
-        new Vector2(100, -20),
-        new Vector2(140, -20),
+        new Vector2(x - 80, y -80),
+        new Vector2(x - 40,  y - 80),
+        new Vector2(x - 60, y - 40),
+        new Vector2(x - 230, y + 10),
+        new Vector2(x - 190, y + 10),
+        new Vector2(x - 150, y + 10),
+        new Vector2(x - 110, y + 10),
+        new Vector2(x - 70, y + 10),
+        new Vector2(x - 30, y + 10),
+        new Vector2(x + 10, y + 10),
+        new Vector2(x + 50, y + 10),
+        new Vector2(x +90, y + 10),
 
     };
 

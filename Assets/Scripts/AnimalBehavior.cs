@@ -8,6 +8,7 @@ public class AnimalBehavior : MonoBehaviour
     private bool finished;
     public GameObject endscreen;
     public GameObject animalPrefab;
+    public GameObject textPrefab;
     //public List<Sprite> animalSprites;
     public Animalinfo animalinfo;
     // Start is called before the first frame update
@@ -80,6 +81,10 @@ public class AnimalBehavior : MonoBehaviour
         NewAnimal.GetComponent<SpriteRenderer>().sprite = animal.Pic;
         dragBehavior.species = animal.Species;
         dragBehavior.invert = animal.Invert;
+        // add text
+        GameObject text = Instantiate(textPrefab, NewAnimal.transform.position, Quaternion.identity,NewAnimal.transform);
+        text.transform.position = new Vector3(text.transform.position.x, text.transform.position.y -15);
+        text.GetComponent<TMPro.TextMeshProUGUI>().text = animal.Species;
         dragBehaviorList.Add(dragBehavior);
 
     }

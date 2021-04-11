@@ -31,7 +31,7 @@ public class Relationships : MonoBehaviour
         LineRenderer lr = line.GetComponent<LineRenderer>();
         lr.material = new Material(Shader.Find("Sprites/Default"));
         lr.material.color = Color.green;
-        lr.SetWidth(.1f, .1f);
+        lr.startWidth = .1f;
         lr.SetPosition(0, pos1);
         lr.SetPosition(1, pos2);
         lines.Add(line);
@@ -55,15 +55,17 @@ public class Relationships : MonoBehaviour
         float ch1x = ch1.x;
         float ch2x = ch2.x;
 
+
         // create new points to Use
         Vector3 upper  = new Vector3(midx, ch1y, 0f);
         Vector3 mid = new Vector3(midx, py, 0f);
         Vector3 lower = new Vector3(midx, ch2y, 0f);
         Vector3 newchild1 = new Vector3(ch1x - x1, ch1y, 0f);
         Vector3 newchild2 = new Vector3(ch2x - x2, ch2y, 0f);
+        Vector3 newparent = (Vector2) parent;
 
         // Draw lines for tree
-        DrawLine(parent, mid);
+        DrawLine(newparent, mid);
         DrawLine(upper, lower);
         DrawLine(upper, newchild1);
         DrawLine(lower, newchild2);
