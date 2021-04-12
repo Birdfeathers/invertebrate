@@ -34,6 +34,7 @@ public class Relationships : MonoBehaviour
         lr.startWidth = .1f;
         lr.SetPosition(0, pos1);
         lr.SetPosition(1, pos2);
+        line.transform.SetParent(transform);
         lines.Add(line);
 
 
