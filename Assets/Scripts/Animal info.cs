@@ -9,12 +9,14 @@ public class Animals
     public string Species{get; set;}
     public bool Invert{get; set;}
     public Sprite Pic{get; set;}
+    public string Type{get; set;}
     public Animals(int number, string species, bool invert, Sprite pic)
     {
         Number = number;
         Species = species;
         Invert = invert;
         Pic = pic;
+        //Type = type;
     }
 }
 
